@@ -2,7 +2,7 @@ const profile = bodymovin.loadAnimation({
   container: document.getElementById('profile'), // Required
   path: 'public/profile.json', // Required
   renderer: 'svg', // Required
-  loop: false, // Optional
+  loop: true, // Optional
   autoplay: true, // Optional
 });
 
