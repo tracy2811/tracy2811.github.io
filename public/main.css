@@ -81,7 +81,7 @@ header {
 }
 
 header > p {
-  margin-top: 2rem;
+  margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
@@ -185,6 +185,7 @@ main > div > * {
   width: 90%;
   max-width: 960px;
   margin: auto;
+  margin-top: 1em;
 }
 
 label {
