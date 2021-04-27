@@ -1,0 +1,267 @@
+$primary-color: #393b44;
+$secondary-color: #8d93ab;
+$background-color: #f1f3f8;
+$background-color-main: #d6e0f0;
+$font-stack: "Raleway", sans-serif;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background-color: $background-color;
+  color: $primary-color;
+  text-align: center;
+  font-size: 2.4rem;
+  overflow-x: hidden;
+  line-height: 1.5em;
+}
+
+/* Header and navigation Styling*/
+h1 {
+  font-size: 7.2rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  animation-duration: 3s;
+  animation-name: span;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes span {
+  from {
+    letter-spacing: 0.2em;
+  }
+
+  to {
+    letter-spacing: 0.3em;
+  }
+}
+
+h2 {
+  font-size: 3.4rem;
+  color: $secondary-color;
+}
+
+h3 {
+  font-size: 2.6rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+h3 > span {
+  float: right;
+}
+
+#header {
+  background-color: $background-color-main;
+  height: 100vh;
+  animation-duration: 1.5s;
+  animation-name: slidein;
+  > a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 60%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+header {
+  padding-top: 4rem;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  font-size: 4rem;
+  > p {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  ul {
+    height: 5rem;
+  }
+  img {
+    width: 4.5rem;
+    transition: width 0.3s;
+    &:hover {
+      width: 5rem;
+    }
+  }
+}
+
+#profile {
+  height: 60vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+nav {
+  background-color: $background-color-main;
+  color: $secondary-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  animation-duration: 1.5s;
+  animation-name: slidein;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+  &:visited {
+    color: $secondary-color;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+
+  li {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+#arrow-down {
+  height: 10rem;
+}
+
+/* Footer Styling */
+footer {
+  font-size: 1.6rem;
+  border-top: 2px solid $background-color-main;
+  padding: 1rem;
+}
+
+/* Main Styling */
+.button {
+  background: $primary-color;
+  color: $background-color;
+  border-radius: 0.4rem;
+  transition: font-size 0.3s;
+}
+
+.intermediate {
+  background: $secondary-color;
+}
+
+main {
+  > div {
+    border-top: 1px solid $background-color-main;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    > * {
+      width: 90%;
+      max-width: 960px;
+      margin: auto;
+      margin-top: 2em;
+    }
+  }
+  p {
+    text-align: justify;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3em;
+  text-align: left;
+}
+
+button,
+input,
+textarea {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+input,
+textarea {
+  background: $background-color-main;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  &:focus {
+    box-shadow: 0 0 0.5rem 0.3rem $background-color-main;
+    border: 1px solid $secondary-color;
+  }
+}
+
+textarea {
+  height: 7em;
+}
+
+#contact {
+  .button:hover {
+    font-size: 2.6rem;
+    box-shadow: 0 0 0.5rem 0.1rem $secondary-color;
+  }
+  ul {
+    display: block;
+  }
+  li {
+    padding: 1rem 0;
+  }
+  form {
+    max-width: 600px;
+  }
+}
+
+.card {
+  background: $background-color-main;
+  border-radius: 0.4rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+  > * {
+    padding: 1.2rem;
+  }
+  h3 {
+    border-bottom: 2px solid $background-color;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  a {
+    text-decoration: underline;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
